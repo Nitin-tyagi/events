@@ -1,0 +1,215 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+width: 100%;
+height: 100vh;
+overflow: hidden;
+background-color: rgb(7, 7, 7);
+}
+.heading1{
+  margin: 10px;
+  color: yellow;
+}
+.logo{
+  
+  display: flex;
+ 
+  
+}
+.logo-image{
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.section{
+  display: flex;
+}
+
+.section1{
+  position: relative;
+  width: 60%;
+  height: 100vh;
+}
+
+.section2{
+width: 40%;
+}
+
+.btn-group{
+  position: absolute;
+  bottom: 80px;
+  background-color: rgb(46, 45, 45);
+  color: aliceblue;
+  /* border-radius: 50%; */
+}
+
+.btn{
+  border-radius: 50%;
+  /* color: whitesmoke; */
+}
+
+/* slider code */
+
+.slider{
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slide-track{
+  display: flex;
+  width: calc(250px * 18);
+  height: 300px;
+  
+  /* animation: 30s linear 40s infinite alternate scroll; */
+  animation: 35s slide infinite linear;
+}
+
+.slide-track:hover{
+  animation-play-state: paused;
+}
+
+ @keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
+  
+}
+
+.slide{
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+
+img{
+  width: 100%;
+  height: 500px;
+  transition: transform 1%;
+}
+img:hover{
+  transform: translateZ(20px);
+}
+
+
+/* scroll animation */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+  
+}
+
+.logos-slide p{
+  position: absolute;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: -20px;
+  /* height: 100vh; */
+  font-size: 20px;
+  font-weight: 500;
+  /* white-space: nowrap; */
+  animation: 5s slide infinite linear;
+}
+
+.logos-slide {
+ width: 110%;
+  /* height: 100vh; */
+  /* margin: 0 40px; */
+  
+}
+
+.logos{
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 183%;
+  height: 0vh;
+  transform: rotate(90deg);
+ overflow: hidden;
+ padding: 40px 0;
+ margin:-7px;
+ background-color: rgb(153, 60, 182);
+ z-index: 0;
+}
+
+
+
+.star{
+
+  font-size: 30px;
+ 
+}
+
+
+/* qrcode desine */
+
+.qrcode{
+  display: flex;
+  justify-content: space-between;
+}
+
+.qrimg{
+  width: 100px;
+  height: 100px;
+  background-color: beige;
+  border-radius: 20%;
+}
+
+.btnlist{
+  width: 140px;
+  border-radius: 30%;
+  height: 40px;
+  background-color: yellow;
+  font-weight: 500;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+/* card designe */
+.card{
+  width: 200px;
+  height: 250px;
+}
+
+.card-body{
+  display: flex;
+  
+  justify-content: space-between;
+  width: 190px;
+  height: 50px;
+}
+
+.card-title{
+  margin: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.card-img-bottom{
+  margin: 10px 0 10px 20px;
+  /* margin-bottom: 5px; */
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+
+}
